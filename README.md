@@ -17,3 +17,5 @@ The main branch is the most current code.
 🚸
 🐟
 📱
+🏊
+🚣
