@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&display=swap');
+
+*{box-sizing: border-box;margin:0;}
+html{scroll-behavior: smooth;}
+
+:root{
+  --heading-font: 'Lilita One', cursive;
+  --body-font: 'Open Sans', sans-serif;
+  --color1: #182e2e;
+  --color2: #628080;
+  --color3: #809e9e;
+  --color4: #ca7e04;
+  --color5: #f0d8a6;
+  --color6: #f7f7f7;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+body{
+  font-family: var(--body-font);
+}
+
+header{
+  background-color: var(--color1);
+}
+nav{
+  height: 60px;
+  display:flex;
+  align-items: center;
+  padding:3px 1rem;
+  gap:1rem;
+}
+.menu-logo{
+  height:96%;
+  display: block;
+  margin-right:auto;
+}
+.menu-link{
+  color: var(--color5);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+.menu-link:hover{
+  color: var(--color4);
+}
+.menu-text{
+  display:none;
+}
+
+/* for screens that are 520px and wider */
+@media (min-width:520px){
+  .menu-text{
+    display: inline-block;
+  }
+  nav{
+    height:100px;
+    justify-content: center;
+    gap:1.75rem;
+  }
+  .menu-logo{
+    margin:0;
+  }
+}
+/* end of nav bar media query */
+
+#hero{
+  background-color: var(--color2);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "splash splash"
+    "cta    cta"
+    "tent   rv"
+  ;
+}
+.splash{
+  grid-area: splash;
+  color: var(--color5);
+  min-height: 60vh;
+  font-size: 2rem;
+  background-image: url("./assets/tent.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  text-align: center;
+  padding-top:2.25rem;
+}
+.cta{
+  grid-area: cta;
+  color: var(--color5);
+  text-align: center;
+  padding:1.5rem 0;
+}
+.tent{
+  grid-area: tent;
+  color: var(--color5);
+  text-align: center;
+}
+.rv{
+  grid-area: rv;
+  color: var(--color5);
+  text-align: center;
+}
+#hero input{
+  display: block;
+  width:90%;
+  padding:.5rem;
+  font-family: var(--body-font);
+  margin:1.5rem auto;
+}
+
+/* media query for sceens that are 740px and wider */
+@media (min-width:740px){
+  #hero{
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-areas: 
+      "splash cta  cta"
+      "splash tent rv"
+    ;
+    grid-template-rows: min-content 1fr;
+  }
+}
+/* end of media query for the hero section */
+
+
+
+
+
+
