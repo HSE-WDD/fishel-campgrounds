@@ -6,3 +6,14 @@
 The main branch is the most current code.
 * each branch is named for the day the code was written
 * day1 --> branch name for day 1 code
+
+
+### Emojis We will use on the site
+⛰️
+👕
+💩
+🚓
+🏐
+🚸
+🐟
+📱
