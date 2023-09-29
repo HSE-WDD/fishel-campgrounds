@@ -126,6 +126,107 @@ nav{
 }
 /* end of media query for the hero section */
 
+#events{
+  color: var(--color1);
+  padding: 1rem;
+}
+#events h2{
+  font-size:3rem;
+  margin:2rem 0;
+  border-bottom: 2px solid var(--color2);
+}
+
+.event-month h3{
+  display: flex;
+  align-items: baseline;
+}
+.event-month h3::after{
+  content: "";
+  display: block;
+  background-color: var(--color2);
+  height: 1px;
+  flex:auto;
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+}
+.event{
+  width:90%;
+  margin:2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: min-content 1fr auto;
+  grid-template-areas: 
+    "eday epic"
+    "x    epic"
+    "x    einfo"
+    ;
+  max-height:50vh;
+}
+.e-day{
+  grid-area: eday;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding-top:1rem;
+}
+.num{
+  display: block;
+  font-size: 2rem;
+}
+.e-pic{
+  grid-area: epic;
+}
+.e-pic img{
+  width: 100%;
+  height: 100%;
+  max-height: 300px; 
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+.e-info{
+  grid-area:einfo;
+  padding-top:.5rem;
+}
+
+/* for screens that are 740px and wider */
+@media (min-width: 740px){
+  .event{
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "eday einfo epic"
+    ;
+    gap:1.5rem;
+  }
+  .e-day h4{
+    background-color: var(--color4);
+    color: var(--color6);
+    padding: .75rem 1.25rem;
+    border-radius: .5rem;
+  }
+}
+/* end of #events media query */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
